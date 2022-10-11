@@ -1,0 +1,45 @@
+<html lang="vi">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Blog_index</title>
+        
+    </head>
+    <body>
+        <script>
+            const authorDiv = document.querySelector(".author");
+            function change_author_color1() {
+                authorDiv.style.backgroundColor = "yellow";
+            };
+            function change_author_color2() {
+                authorDiv.style.backgroundColor = "green";
+            };          
+            </script>
+        <div class="bi-container">
+            <h2 class="index-heading">Tất các blog</h2>
+            <ul class="table-of-blogs">
+                <li class="author">
+                    <a href="https://www.blogger.com/profile/00965819760488730111">Đặng Minh Hoàng</a>
+                    <ul class = "blog-list">
+                        <li class="blog"  onmouseover = "change_author_color1()" onmouseout ="change_author_color2()">
+                            <a href="https://cybtechnophileblog.blogspot.com/2022/10/blog-post_5.html">Nháp 1</a>
+                        </li>
+                        <li class="blog">
+                            <a href="https://cybtechnophileblog.blogspot.com/2022/10/blog-post.html">Nháp 2</a>
+                        </li>
+                        <li class="blog">
+                            <a href="https://cybtechnophileblog.blogspot.com/2022/10/nhap-3.html">Nháp 3</a>
+                        </li>
+                        <li class="blog">
+                            <a href="https://cybtechnophileblog.blogspot.com/2022/10/nhap-4.html">Nháp 4</a>
+                        </li>
+                        <li class="blog">
+                            <a href="https://cybtechnophileblog.blogspot.com/2022/10/nhap-5.html">Nháp 5</a>
+                        </li>  
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

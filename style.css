@@ -1,0 +1,60 @@
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+  
+.content {
+    padding: 8px ;
+    line-height: 1.9;
+}
+  
+.bi-container {
+    max-width: 100%;
+    font-family: "Roboto", sans-serif;
+    background: #deff9d;
+    border-radius: 8px;
+    box-shadow: 0 4px 11px rgba(0, 0, 0, 0.6);
+}
+  
+.bi-container h2.index-heading {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 0 16px;
+    padding-top: 16px;
+}
+
+
+.table-of-blogs {
+    list-style: none;
+    padding: 0px;
+}
+  
+.table-of-blogs li.author li.blog {
+    background: #222;
+    transition: 400ms;
+    list-style: none;
+}
+.table-of-blogs li.author{
+    background-color: green;
+    transition: 400ms;
+}
+
+.table-of-blogs li.author li:nth-of-type(even).blog {
+    background: #2e2e2e;
+}
+  
+.table-of-blogs li.author li:hover.blog {
+    background: #000;
+}
+  
+.table-of-blogs li a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding: 16px 0;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
