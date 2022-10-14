@@ -1,11 +1,17 @@
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
 
 body {
     font-family: "Roboto", sans-serif;
-}
-  
-.content {
-    padding: 8px ;
-    line-height: 1.9;
 }
   
 .bi-container {
@@ -28,26 +34,43 @@ body {
     list-style: none;
     padding: 0px;
 }
-  
-.table-of-blogs li.author li.blog {
+.blog-list {
+    padding:0px;
+    display: none;
+}
+
+.show {
+    display: block;
+} 
+.dropdown_menu-6{
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+.table-of-blogs li.content li.blog {
     background: #222;
     transition: 400ms;
     list-style: none;
 }
-.table-of-blogs li.author{
-    background-color: green;
+
+.table-of-blogs li.content{
+    background-color: yellowgreen;
     transition: 400ms;
 }
 
-.table-of-blogs li.author li:nth-of-type(even).blog {
+.table-of-blogs li.content li:nth-of-type(even).blog {
     background: #2e2e2e;
 }
   
-.table-of-blogs li.author li:hover.blog {
+.table-of-blogs li.content li:hover.blog {
     background: #000;
 }
+
+.table-of-blogs li.content:hover {
+    background-color: darkblue;
+}
   
-.table-of-blogs li a {
+.table-of-blogs li.blog a {
     text-decoration: none;
     color: #fff;
     margin-left: 24px;
@@ -57,4 +80,52 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.table-of-blogs span.author-name{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding: 16px 0;
+    display: block;
+    font-size: 110%;
+    font-weight: 100;
+}
+
+.author {
+    display: flex;
+    justify-content: space-between;
+}
+.profile {
+    text-decoration: none;
+    color: white;
+    margin-right: 24px;
+    padding: 16px;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.profile span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 300ms;
+}
+
+.profile span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.profile:hover span{
+    padding-right: 25px;
+}
+
+.profile:hover span:after {
+    opacity:1;
+    right: 0;
 }
