@@ -1,15 +1,9 @@
-function show_list() {
-  document.getElementsById("dangminhhoang").classList.toggle("show");
+var author = document.getElementById("author");
+var bloglist = document.getElementById("dangminhhoang")
+function showList(){
+
+    if(bloglist.className == 'blog-list'){bloglist.className = 'blog-list show dropdown_menu-1'}
+    else{bloglist.className = 'blog-list'}     
 }
-window.onclick = function(event) {
-  if (!event.target.matches('.author')) {
-    var dropdowns = document.getElementsByClassName("blog-list");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+
+author.addEventListener("click", function(){showList();}) 
