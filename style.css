@@ -20,6 +20,7 @@ body {
     background: #deff9d;
     border-radius: 8px 8px 0px 0px;
     box-shadow: 0 4px 11px rgba(0, 0, 0, 0.6);
+    position: relative;
 }
   
 .bi-container h2.index-heading {
@@ -32,11 +33,13 @@ body {
 .table-of-blogs {
     list-style: none;
     padding: 0px;
-}
+}     
 .blog-list {
     padding:0px;
     display: none;
-    background-color: none;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 4px 11px rgba(0, 0, 0, 0.6);
 }
 
 .show {
@@ -46,6 +49,7 @@ body {
     animation: growDown 300ms ease-in-out forwards;
     transform-origin: top center;
 }
+
 
 .table-of-blogs li.content li.blog {
     background: #222;
