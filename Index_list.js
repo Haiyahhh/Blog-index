@@ -1,10 +1,16 @@
 /* list-showing function */
-var AllAuthor = document.querySelectorAll(".author");
-var bloglist = document.getElementById("dangminhhoang");
+var AllContents = document.querySelectorAll(".content");
 function showList(x){
 
     if(x.className == 'blog-list'){x.className = 'blog-list show dropdown_menu-1'}
     else{x.className = 'blog-list'}     
 }  
+function apply_to_all_list(){
+    AllContents.forEach((content) => {
+        div = content.querySelector('div');
+        ul = content.querySelector('ul');
+        div.addEventListener("click",function(){showList(ul);});
+    })
+}
 
-AllAuthor.forEach (a => {a.addEventListener("click", showList(bloglist))})
+apply_to_all_list();
