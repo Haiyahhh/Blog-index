@@ -1,5 +1,5 @@
 /* list-showing function */
-var AllAuthor = document.getElementsByClassName("author");
+var AllAuthor = document.querySelectorAll(".author");
 var bloglist = document.getElementById("dangminhhoang");
 function showList(x){
 
