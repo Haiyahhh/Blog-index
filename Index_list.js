@@ -1,11 +1,12 @@
-/* list-showing funcion */
-var author = document.getElementById("author");
+/* list-showing function */
+var AllAuthors = document.querySelectorAll(".author");
 var bloglist = document.getElementById("dangminhhoang");
-function showList(){
+function showList(x){
 
-    if(bloglist.className == 'blog-list'){bloglist.className = 'blog-list show dropdown_menu-1'}
-    else{bloglist.className = 'blog-list'}     
+    if(x.className == 'blog-list'){x.className = 'blog-list show dropdown_menu-1'}
+    else{x.className = 'blog-list'}     
 }  
 
-author.addEventListener("click", function(){showList();}) 
-
+for (const author of AllAuthors){
+    author.addEventListener('click', showList(bloglist))
+}
