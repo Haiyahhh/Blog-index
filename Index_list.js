@@ -1,5 +1,5 @@
 /* list-showing function */
-var AllAuthors = document.querySelectorAll(".author");
+var AllAuthor = document.getElementsByClassName("author");
 var bloglist = document.getElementById("dangminhhoang");
 function showList(x){
 
@@ -7,6 +7,4 @@ function showList(x){
     else{x.className = 'blog-list'}     
 }  
 
-for (const author of AllAuthors){
-    author.addEventListener('click', showList(bloglist))
-}
+AllAuthor.forEach (a => {a.addEventListener("click", showList(bloglist))})
