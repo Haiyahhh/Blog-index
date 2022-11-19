@@ -20,7 +20,6 @@ body {
     background: #deff9d;
     border-radius: 8px 8px 0px 0px;
     box-shadow: 0 4px 11px rgba(0, 0, 0, 0.6);
-    position: relative;
 }
   
 .bi-container h2.index-heading {
@@ -73,8 +72,6 @@ body {
     display: none;
     box-shadow: 0 4px 11px rgba(0, 0, 0, 0.6);
     z-index: 3;
-    position: absolute;
-    width: 100%;
 }
 
 .show {
