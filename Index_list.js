@@ -1,5 +1,3 @@
-
-
 const index_container = document.querySelector(".bi-container");
             
 function create_bi (){
@@ -80,18 +78,21 @@ function create_bi (){
     }
 create_bi();
 
-var AllContents = document.querySelectorAll(".content");
-function showList(x){
 
-    if(x.className == 'blog-list'){x.className = 'blog-list show dropdown_menu-1'}
-    else{x.className = 'blog-list'}     
-}  
-function apply_to_all_list(){
-    AllContents.forEach((content) => {
-        let div = content.querySelector('div');
-        let ul = content.querySelector('ul');
-        div.addEventListener("click",function(){showList(ul);});
-    })
+
+function slide_down_animation(){
+    const AllAuthors = document.getElementsByClassName("author");
+    for (let i = 0; i < AllAuthors.length; ++i) {
+        AllAuthors[i].addEventListener("click", function() {
+            let panel = AllAuthors[i].nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } 
+            else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+
 }
-apply_to_all_list();
-
+slide_down_animation();
