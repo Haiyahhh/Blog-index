@@ -1,7 +1,14 @@
-const index_container = document.querySelector(".bi-container");
-            
-function create_bi (){
 
+function remote() {
+    const index_container = document.querySelector(".bi-container");
+    if (index_container != null){
+        create_bi();
+    }
+}
+remote();
+function create_bi() {
+    const index_container = document.querySelector(".bi-container");
+    
     const hForIndex = document.createElement("h2");
     hForIndex.classList.add("index-heading");
     hForIndex.innerText = "Tất Cả Blog";
@@ -75,10 +82,7 @@ function create_bi (){
         }
     }
 
-    }
-create_bi();
-
-
+}
 
 function slide_down_animation(){
     const AllAuthors = document.getElementsByClassName("author");
